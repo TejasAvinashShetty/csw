@@ -1,0 +1,10 @@
+name: binder
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=y
+  - pip:
+    - matplotlib
+    - watermark
+    - git+https://github.com/TejasAvinashShetty/csw.git@master#egg=csw
