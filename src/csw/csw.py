@@ -1,7 +1,7 @@
 from warnings import warn
 
 
-def crude_string_writer(cstrw_file_name, obj_list, obj_name_list):
+def crude_string_writer(csw_file_name, obj_list, obj_name_list):
     '''Write string variables to a file
 
     Basically a script file to reduce the drudgery of writing
@@ -20,7 +20,7 @@ def crude_string_writer(cstrw_file_name, obj_list, obj_name_list):
     Parameters
     ----------
 
-    cstrw_file_name  : str
+    csw_file_name  : str
                     The name of the file in which the objects would be written
 
     obj_list      : list of str
@@ -35,7 +35,7 @@ def crude_string_writer(cstrw_file_name, obj_list, obj_name_list):
     -------
     None
     '''
-    cstrw_file = cstrw_file_name + '.txt'
+    csw_file = csw_file_name + '.txt'
     if len(obj_list) == len(obj_name_list):
         pass
     else:
@@ -48,13 +48,13 @@ def crude_string_writer(cstrw_file_name, obj_list, obj_name_list):
             for dl in range(abs(deficit_len)):
                 obj_list.append(str(42))
 
-    with open(cstrw_file, 'w') as cstrw:
+    with open(csw_file, 'w') as csw:
         for obj, obj_name in zip(obj_list, obj_name_list):
-            cstrw.write(obj_name)
-            cstrw.write('\n')
-            cstrw.write(obj)
-            cstrw.write('\n\n')
-            cstrw.write('\n\n')
-            cstrw.write('\n\n')
+            csw.write(obj_name)
+            csw.write('\n')
+            csw.write(obj)
+            csw.write('\n\n')
+            csw.write('\n\n')
+            csw.write('\n\n')
 
     return None
