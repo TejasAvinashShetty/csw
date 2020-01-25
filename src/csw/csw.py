@@ -1,4 +1,5 @@
 from warnings import warn
+__all__ = ['crude_string_writer']
 
 
 def crude_string_writer(csw_file_name, obj_list, obj_name_list):
